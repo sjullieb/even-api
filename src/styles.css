@@ -1,3 +1,24 @@
 body {
-  background-color: #7FDBFF;
+  background-color: #BBBBBB;
+}
+
+input {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+#formCol {
+  border-right: 1px solid black;
+  
+}
+
+#userInfo {
+  margin-top: 45px;
 }

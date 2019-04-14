@@ -4,6 +4,56 @@
     <title>EVEN API for a personal loan offer</title>
   </head>
   <body>
-    
+    <div class="container">
+      <div class="header">
+        <h1>Get Paired With a Personal Loan Offer</h1>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-9" id="formCol">
+          <form id="inForm">
+            <div id="loanInfo">
+              <h2>Loan Information</h2>
+              <h5>Helps us pair you with the loan you're looking for.</h5>
+              <input id="loanAmount" name="loanAmount" placeholder="Loan Amount">
+              <select id="loanPurpose" name="loanPurpose">
+                <option id="debtConsolidation" value="0">Debt Consolidation</option>
+                <option id="autoLoan" value="1">Auto Loan</option>
+                <option id="homeImprovement" value="2">Home Renovations</option>
+                <option id="personalLoan" value="3">High Value Purchase</option>
+              </select>
+            </div>
+            <div id="userInfo">
+              <h2>Your Information</h2>
+              <h5>Tell our partners a little about yourself.</h5>
+              <input id="firstName" name="firstName" placeholder="First Name" type="text">
+              <input id="lastName" name="lastName" placeholder="Last Name" type="text">
+              <input id="email" name="email" placeholder="E-mail" type="text"><br>
+              <input id="city" name="city" placeholder="City" type="text">
+              <input id="state" name="state" placeholder="State" type="text">
+              <input id="primaryPhone" name="primaryPhone" placeholder="Home Phone" type="text">
+              <input id="workPhone" name="workPhone" placeholder="Work Phone" type="text"><br>
+              <input id="address1" name="address1" placeholder="Address Line 1" type="text">
+              <input id="address2" name="address2" placeholder="Address Line 2" type="text"><br>
+              <input id="ssn" name="ssn" placeholder="Social Security" type="text">
+              <select id="creditScore" name="creditScore">
+                  <option>Credit Score</option>
+                  <option id="badCredit" value="0">Poor (580-)</option>
+                  <option id="fairCredit" value="1">Fair (581-669)</option>
+                  <option id="goodCredit" value="2">Good (670-739)</option>
+                  <option id="greatCredit" value="3">Very Good (740-799)</option>
+                  <option id="excellentCredit" value="4">Excellent (800-850)</option>
+                </select>
+            </div>
+            <div id="employmentInfo">
+              
+            </div>
+            <button type="submit">Get Loan Offers!</button>
+          </form>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+    </div>
   </body>
 </html>
