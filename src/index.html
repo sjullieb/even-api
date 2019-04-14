@@ -51,7 +51,7 @@
                 <input id="address2" name="address2" placeholder="Address Line 2" type="text"><br>
                 <input id="city" name="city" placeholder="City" type="text">
                 <input id="state" name="state" placeholder="State" type="text"><br>
-                <input id="ssn" name="ssn" placeholder="Social Security" type="text">
+                <input id="ssn" name="ssn" placeholder="Social Security" type="text" maxlength=11>
                 <select id="creditScore" name="creditScore">
                   <option disabled selected>-Credit Score-</option>
                   <option id="badCredit" value="poor">Poor (600-)</option>
@@ -99,9 +99,8 @@
       <div id="display">
         <div class="header">
           <h1>Your Personalized Loans</h1>
-          <h4>We found some loans just for you!</h4>
+          <h4 id="loanSuccess">We found some loans just for you!</h4>
           <hr>
-        </div>
         </div>
         <div class="row">
           <div class="col-md-2">
