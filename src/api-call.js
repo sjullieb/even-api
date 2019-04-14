@@ -90,8 +90,12 @@ function fillLoansArray(response){
 
       if(loan.originator.hasOwnProperty('images')){
         for(let j = 0; j < loan.originator.images.length; j++){
-            let newImage = new Image(loan.originator.images[j].sizeKey, loan.originator.images[j].url);
-            newOriginator.images.push(newImage);
+          let imgUrl = loan.originator.images[j].url;
+          if(imgUrl.indexOf("http") === -1){
+            imgUrl = "http://" + imgUrl;
+          }
+          let newImage = new Image(loan.originator.images[j].sizeKey, imgUrl);
+          newOriginator.images.push(newImage);
         }
       }
 
