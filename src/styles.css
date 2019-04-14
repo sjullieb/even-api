@@ -8,6 +8,7 @@ input {
 
 button {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .header {
@@ -16,9 +17,23 @@ button {
 
 #formCol {
   border-right: 1px solid black;
-  
+  border-left: 1px solid black;
 }
 
 #userInfo {
   margin-top: 45px;
+}
+
+#loanDisplay {
+  display: none;
+}
+
+td, th {
+  padding: 5px 10px 5px 10px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.logo {
+  max-height: 30px;
 }

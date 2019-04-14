@@ -7,7 +7,6 @@ import { Lead } from "./lead.js"
 import { Loan, Originator, Image } from './loan.js';
 
 $(document).ready(function() {
-  // let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
   $("#inForm").submit(function(event){
     event.preventDefault();
     let myFirstName = $("#firstName").val();
@@ -29,7 +28,7 @@ $(document).ready(function() {
     let myPayFrequency = $("#paymentFrequency").val();
     let inputLead = new Lead(myFirstName, myLastName, myEmail, myCity, myState, myPrimaryPhone, myWorkPhone, myAddress1, myAddress2, mySsn, myPurpose, myLoanAmount, myEducationLevel, myProvidedCreditRating, myEmploymentStatus, myAnnualIncome, myPayFrequency);
     console.log(inputLead.returnJSON());
-    apiCallPost(inputLead.returnJSON(), postError, getError);
+    apiCallPost(inputLead.returnJSON(), postError, getError, displayLoans);
   });
 });
 
@@ -42,5 +41,9 @@ function getError(errorText){
 }
 
 function displayLoans(loans){
-  console.log(loans);
+  let str = "<tr><th>Originator</th><th>Pre-Qualified</th><th>Pre-Approved</th><th>Term Length</th><th>Loan Amount</th><th>APR</th><th>Link</th></tr>";
+  loans.forEach(function(loan){
+    str+=`<tr><td>${loan.originator.name} <img class="logo" src=${loan.originator.images[0].url}></td><td>${loan.preQualified}</td><td>${loan.preApproved}</td><td>${loan.termLength} ${loan.termUnit}</td><td>$${loan.minAmount}-$${loan.maxAmount}</td><td>${loan.minApr}%-${loan.maxApr}%</td><td><a href=${loan.url}>Details</a></td>`;
+  });
+  $("#loanDisplay").html(str);
 }
