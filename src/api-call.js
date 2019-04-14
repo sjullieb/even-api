@@ -99,7 +99,15 @@ function fillLoansArray(response){
         }
       }
 
-      let newLoan = new Loan(newOriginator, loan.preQualified, loan.preApproved, loan.termLength, loan.termUnit);
+      let preQualified = "YES";
+      if(loan.preQualified === false)
+        preQualified = "NO";
+
+      let preApproved = "YES";
+      if(loan.preApproved === false)
+        preApproved = "NO";
+
+      let newLoan = new Loan(newOriginator, preQualified, preApproved, loan.termLength, loan.termUnit);
 
       if(loan.hasOwnProperty('maxAmount')){
           newLoan.maxAmount = loan.maxAmount;
