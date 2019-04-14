@@ -1,10 +1,16 @@
 // No fields are strictly required in the lead.
 
 export class Lead{
-    constuctor(firstName, lastName){
-      this.firstName = firstName;
-      this.lastName = lastName;
-      this.productType = 'loan';
+    constructor(myFirstName, myLastName, myEmail, myCity, myState, myPrimaryPhone, myWorkPhone, myAddress1, myAddress2, mySsn, myPurpose, myLoanAmount, myEducationLevel, myProvidedCreditRating, myEmploymentStatus, myAnnualIncome, myPayFrequency ){
+      this.productTypes = ["loan"];
+      this.personalInformation = { firstName: myFirstName, lastName: myLastName, email: myEmail, city: myCity, state: myState, primaryPhone: myPrimaryPhone, workPhone: myWorkPhone, address1: myAddress1, address2: myAddress2, ssn: mySsn, educationLevel: myEducationLevel};
+      this.loanInformation = { purpose: myPurpose, loanAmount: parseInt(myLoanAmount)};
+      this.creditInformation = { providedCreditRating: myProvidedCreditRating };
+      this.financialInformation = { employmentStatus: myEmploymentStatus, annualIncome: parseInt(myAnnualIncome), employmentPayFrequency: myPayFrequency }
+    }
+
+    returnJSON(){
+      return JSON.stringify(this);
     }
 }
 
