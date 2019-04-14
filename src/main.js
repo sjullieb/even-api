@@ -8,7 +8,7 @@ import { Loan, Originator, Image } from './loan.js';
 
 $(document).ready(function() {
   let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
-  apiCallPost(testData, postError, getError);
+  apiCallPost(testData, postError, getError, displayLoans);
 });
 
 function postError(errorText){
@@ -20,5 +20,22 @@ function getError(errorText){
 }
 
 function displayLoans(loans){
-  console.log(loans);
+  let str = "<tr><th>Originator</th><th>Pre-Qualified</th><th>Pre-Approved</th><th>Term Length</th><th>Loan Amount</th><th>APR</th><th>Link</th></tr>";
+  loans.forEach(function(loan){
+    str+=`<tr><td>${loan.originator.name} <img class="logo" src=${loan.originator.images[0].url}></td><td>${loan.preQualified}</td><td>${loan.preApproved}</td><td>${loan.termLength} ${loan.termUnit}</td><td>$${loan.minAmount}-$${loan.maxAmount}</td><td>${loan.minApr}%-${loan.maxApr}%</td><td><a href=${loan.url}>Details</a></td>`;
+  });
+  $("#loanDisplay").html(str);
 }
+
+
+// this.originator = originator;
+//     this.preQualified = preQualified;
+//     this.preApproved = preApproved;
+//     this.termLength = termLength;
+//     this.termUnit = termUnit;
+//     this.maxAmount = 0;
+//     this.minAmount = 0;
+//     this.maxApr = 0;
+//     this.minApr = 0;
+//     this.meanApr = 0;
+//     this.url = "";
