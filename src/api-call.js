@@ -35,6 +35,7 @@ export function apiCallGet(uuid){
   }
 
   $.ajax(settings).done(function (response) {
+    console.log(response.pendingResponses.length);
     if(response.pendingResponses.length === 0){
       clearInterval(apiInterval);
     }
