@@ -27,6 +27,8 @@ $(document).ready(function() {
     let myAnnualIncome = $("#annualSalary").val();
     let myPayFrequency = $("#paymentFrequency").val();
     let inputLead = new Lead(myFirstName, myLastName, myEmail, myCity, myState, myPrimaryPhone, myWorkPhone, myAddress1, myAddress2, mySsn, myPurpose, myLoanAmount, myEducationLevel, myProvidedCreditRating, myEmploymentStatus, myAnnualIncome, myPayFrequency);
+    $("#splash").hide();
+    $("#display").show();
     console.log(inputLead.returnJSON());
     apiCallPost(inputLead.returnJSON(), postError, getError, displayLoans);
   });
