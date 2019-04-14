@@ -98,6 +98,11 @@ function fillLoansArray(response){
           newOriginator.images.push(newImage);
         }
       }
+      if(loan.minApr === null)
+        loan.minApr = 0;
+
+      if(loan.minAmount === null)
+        loan.minAmount = 0;
 
       let preQualified = "YES";
       if(loan.preQualified === false)
