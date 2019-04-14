@@ -7,8 +7,29 @@ import { Lead } from "./lead.js"
 import { Loan, Originator, Image } from './loan.js';
 
 $(document).ready(function() {
-  let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
-  apiCallPost(testData, postError, getError, displayLoans);
+  $("#inForm").submit(function(event){
+    event.preventDefault();
+    let myFirstName = $("#firstName").val();
+    let myLastName = $("#lastName").val();
+    let myEmail = $("#email").val();
+    let myCity = $("#city").val();
+    let myState = $("#state").val();
+    let myPrimaryPhone = $("#primaryPhone").val();
+    let myWorkPhone = $("#workPhone").val();
+    let myAddress1 = $("#address1").val();
+    let myAddress2 = $("#address2").val();
+    let mySsn = $("#ssn").val();
+    let myPurpose = $("#loanPurpose").val();
+    let myLoanAmount = $("#loanAmount").val();
+    let myEducationLevel = $("#education").val();
+    let myProvidedCreditRating = $("#creditScore").val();
+    let myEmploymentStatus = $("#employment").val();
+    let myAnnualIncome = $("#annualSalary").val();
+    let myPayFrequency = $("#paymentFrequency").val();
+    let inputLead = new Lead(myFirstName, myLastName, myEmail, myCity, myState, myPrimaryPhone, myWorkPhone, myAddress1, myAddress2, mySsn, myPurpose, myLoanAmount, myEducationLevel, myProvidedCreditRating, myEmploymentStatus, myAnnualIncome, myPayFrequency);
+    console.log(inputLead.returnJSON());
+    apiCallPost(inputLead.returnJSON(), postError, getError, displayLoans);
+  });
 });
 
 function postError(errorText){
@@ -26,16 +47,3 @@ function displayLoans(loans){
   });
   $("#loanDisplay").html(str);
 }
-
-
-// this.originator = originator;
-//     this.preQualified = preQualified;
-//     this.preApproved = preApproved;
-//     this.termLength = termLength;
-//     this.termUnit = termUnit;
-//     this.maxAmount = 0;
-//     this.minAmount = 0;
-//     this.maxApr = 0;
-//     this.minApr = 0;
-//     this.meanApr = 0;
-//     this.url = "";

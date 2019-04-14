@@ -7,6 +7,9 @@ export class Lead{
       this.loanInformation = { purpose: myPurpose, loanAmount: parseInt(myLoanAmount)};
       this.creditInformation = { providedCreditRating: myProvidedCreditRating };
       this.financialInformation = { employmentStatus: myEmploymentStatus, annualIncome: parseInt(myAnnualIncome), employmentPayFrequency: myPayFrequency }
+      if(this.personalInformation.ssn === ""){
+        delete this.personalInformation.ssn;
+      }
     }
 
     returnJSON(){
