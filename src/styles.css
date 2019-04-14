@@ -16,4 +16,9 @@ button {
 
 #formCol {
   border-right: 1px solid black;
+  
+}
+
+#userInfo {
+  margin-top: 45px;
 }
