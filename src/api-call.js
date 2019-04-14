@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 var apiInterval;
 
-export function apiCallPost(data){
+export function apiCallPost(data, postError, getError){
   let settings = {
     "async": true,
     "crossDomain": true,
@@ -18,11 +18,24 @@ export function apiCallPost(data){
   }
 
   $.ajax(settings).done(function (response) {
-    apiInterval = setInterval(apiCallGet, 1000, response.uuid);
+    apiInterval = setInterval(apiCallGet, 1000, response.uuid, getError);
+  }).fail(function(error){
+    let text = error.responseText;
+    let quotes = 0;
+    let strMessage = "";
+    for(let i = 0; i < text.length; i++){
+      if(text[i] === '"'){
+        quotes++;
+      }
+      else if(quotes === 3){
+        strMessage += text[i];
+      }
+    }
+    postError(strMessage);
   });
 }
 
-export function apiCallGet(uuid){
+export function apiCallGet(uuid, getError){
   let settings = {
     "async": true,
     "crossDomain": true,
@@ -35,10 +48,22 @@ export function apiCallGet(uuid){
   }
 
   $.ajax(settings).done(function (response) {
-    console.log(response.pendingResponses.length);
     if(response.pendingResponses.length === 0){
       clearInterval(apiInterval);
     }
     console.log(response);
+  }).fail(function(error){
+    let text = error.responseText;
+    let quotes = 0;
+    let strMessage = "";
+    for(let i = 0; i < text.length; i++){
+      if(text[i] === '"'){
+        quotes++;
+      }
+      else if(quotes === 3){
+        strMessage += text[i];
+      }
+    }
+    getError(strMessage);
   });
 }
