@@ -1,3 +1,19 @@
 body {
   background-color: #BBBBBB;
 }
+
+input {
+  margin-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+#formCol {
+  border-right: 1px solid black;
+}

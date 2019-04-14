@@ -4,19 +4,41 @@
     <title>EVEN API for a personal loan offer</title>
   </head>
   <body>
-    <form id="inForm">
-      <input id="firstName" name="firstName" placeholder="First Name" type="text">
-      <input id="lastName" name="lastName" placeholder="Last Name" type="text">
-      <input id="email" name="email" placeholder="E-mail" type="text">
-      <input id="city" name="city" placeholder="City" type="text">
-      <input id="state" name="state" placeholder="State" type="text">
-      <input id="primaryPhone" name="primaryPhone" placeholder="Home Phone" type="text">
-      <input id="workPhone" name="workPhone" placeholder="Work Phone" type="text">
-      <input id="address1" name="address1" placeholder="Address Line 1" type="text">
-      <input id="address2" name="address2" placeholder="Address Line 2" type="text">
-      <input id="ssn" name="ssn" placeholder="Social Security" type="text">
-      <button type="submit">Get Loan Offers!</button>
-      
-    </form>
+    <div class="container">
+      <div class="header">
+        <h1>Get Paired With a Personal Loan Offer</h1>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-9" id="formCol">
+          <form id="inForm">
+            <div>
+              <h2>Loan Information</h2>
+              <h5>Helps us pair you with the loan you're looking for.</h5>
+            </div>
+            <div>
+              <h2>Your Information</h2>
+              <h5>Tell our partners a little about yourself.</h5>
+              <input id="firstName" name="firstName" placeholder="First Name" type="text">
+              <input id="lastName" name="lastName" placeholder="Last Name" type="text">
+              <input id="email" name="email" placeholder="E-mail" type="text"><br>
+              <input id="city" name="city" placeholder="City" type="text">
+              <input id="state" name="state" placeholder="State" type="text">
+              <input id="primaryPhone" name="primaryPhone" placeholder="Home Phone" type="text">
+              <input id="workPhone" name="workPhone" placeholder="Work Phone" type="text"><br>
+              <input id="address1" name="address1" placeholder="Address Line 1" type="text">
+              <input id="address2" name="address2" placeholder="Address Line 2" type="text"><br>
+              <input id="ssn" name="ssn" placeholder="Social Security" type="text">
+            </div>
+            
+            <button type="submit">Get Loan Offers!</button>
+            
+          </form>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+      </div>
+    </div>
   </body>
 </html>
