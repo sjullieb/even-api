@@ -6,6 +6,14 @@ import { apiCallPost } from "./api-call.js";
 
 $(document).ready(function() {
   let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
-  apiCallPost(testData);
+  apiCallPost(testData, postError, getError);
   // apiCallGet("asdas");
 });
+
+function postError(errorText){
+  console.log(errorText);
+}
+
+function getError(errorText){
+  console.log(errorText);
+}
