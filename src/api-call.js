@@ -11,7 +11,7 @@ export function apiCallPost(data, postError, getError){
     "headers": {
       "Content-Type": "application/json",
       "Accept": "application/vnd.evenfinancial.v1+json",
-      "Authorization": "Bearer e7675dd3-ff3b-434b-95aa-70251cc3784b_88140dd4-f13e-4ce3-8322-6eaf2ee9a2d2"
+      "Authorization": `Bearer ${process.env.token}`
     },
     "processData": false,
     "data": data
@@ -43,7 +43,7 @@ export function apiCallGet(uuid, getError){
     "method": "GET",
     "headers": {
       "Accept": "application/vnd.evenfinancial.v1+json",
-      "Authorization": "Bearer e7675dd3-ff3b-434b-95aa-70251cc3784b_88140dd4-f13e-4ce3-8322-6eaf2ee9a2d2"
+      "Authorization": `Bearer ${process.env.token}`
     }
   }
 
