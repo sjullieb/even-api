@@ -16,8 +16,8 @@ button {
 }
 
 #formCol {
-  border-right: 1px solid darkgray;
-  border-left: 1px solid darkgray;
+  border-right: 1px solid #555555;
+  border-left: 1px solid #555555;
 }
 
 #userInfo {
