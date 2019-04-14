@@ -16,8 +16,8 @@ button {
 }
 
 #formCol {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-right: 1px solid darkgray;
+  border-left: 1px solid darkgray;
 }
 
 #userInfo {
@@ -26,6 +26,10 @@ button {
 
 #display {
   display: none;
+}
+
+#loanDisplay {
+  text-align: center;
 }
 
 td, th {
