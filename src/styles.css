@@ -1,5 +1,6 @@
 body {
   background-color: #BBBBBB;
+  font-family: 'Lato', sans-serif;
 }
 
 input {
@@ -20,7 +21,7 @@ button {
   border-left: 1px solid #555555;
 }
 
-#userInfo {
+.formSection {
   margin-top: 45px;
 }
 
