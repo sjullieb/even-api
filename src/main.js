@@ -45,7 +45,7 @@ function getError(errorText){
 function displayLoans(loans){
   let str = "<tr><th>Originator</th><th>Pre-Qualified</th><th>Pre-Approved</th><th>Term Length</th><th>Loan Amount</th><th>APR</th><th>Link</th></tr>";
   loans.forEach(function(loan){
-    str+=`<tr><td>${loan.originator.name} <img class="logo" src=${loan.originator.images[0].url}></td><td>${loan.preQualified}</td><td>${loan.preApproved}</td><td>${loan.termLength} ${loan.termUnit}</td><td>$${loan.minAmount}-$${loan.maxAmount}</td><td>${loan.minApr}%-${loan.maxApr}%</td><td><a href=${loan.url}>Details</a></td>`;
+    str+=`<tr><td>${loan.originator.name} <img class="logo" src=${loan.originator.images[0].url} alt=""></td><td>${loan.preQualified}</td><td>${loan.preApproved}</td><td>${loan.termLength} ${loan.termUnit}</td><td>$${loan.minAmount}-$${loan.maxAmount}</td><td>${loan.minApr}%-${loan.maxApr}%</td><td><a href=${loan.url}>Details</a></td>`;
   });
   $("#loanDisplay").html(str);
 }
