@@ -33,7 +33,7 @@ export function apiCallPost(data, postError, getError, displayLoans){
         strMessage += text[i];
       }
     }
-    postError(strMessage);
+    postError(error.responseText);
   });
 }
 
@@ -68,7 +68,7 @@ export function apiCallGet(uuid, getError, displayLoans){
         strMessage += text[i];
       }
     }
-    getError(strMessage);
+    getError(error.responseText);
   });
 }
 
