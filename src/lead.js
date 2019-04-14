@@ -10,6 +10,9 @@ export class Lead{
       if(this.personalInformation.ssn === ""){
         delete this.personalInformation.ssn;
       }
+      if(Number.isNaN(this.financialInformation.annualIncome)){
+        delete this.financialInformation.annualIncome;
+      }
     }
 
     returnJSON(){
