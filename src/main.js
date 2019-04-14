@@ -6,10 +6,8 @@ import { apiCallPost } from "./api-call.js";
 import { Lead } from "./lead.js"
 
 $(document).ready(function() {
-  // let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
-  // apiCallPost(testData, postError, getError);
-  let test = new Lead("bob", "foo");
-  console.log(JSON.stringify(test));
+  let testData = "{\r\n  \"productTypes\": [\r\n    \"loan\", \r\n    \"savings\"\r\n  ], \r\n  \"personalInformation\": {\r\n    \"firstName\": \"Young\", \r\n    \"lastName\": \"Liu\"\r\n  }\r\n}";
+  apiCallPost(testData, postError, getError);
 });
 
 function postError(errorText){
