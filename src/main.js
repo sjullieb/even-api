@@ -35,11 +35,13 @@ $(document).ready(function() {
 });
 
 function postError(errorText){
-  console.log(errorText);
+  $("#loanSuccess").hide();
+  $("#loanDisplay").html(errorText);
 }
 
 function getError(errorText){
-  console.log(errorText);
+  $("#loanSuccess").hide();
+  $("#loanDisplay").html(errorText);
 }
 
 function displayLoans(loans){
