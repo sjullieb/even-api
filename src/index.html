@@ -17,10 +17,21 @@
               <h5>Helps us pair you with the loan you're looking for.</h5>
               <input id="loanAmount" name="loanAmount" placeholder="Loan Amount">
               <select id="loanPurpose" name="loanPurpose">
-                <option id="debtConsolidation" value="0">Debt Consolidation</option>
-                <option id="autoLoan" value="1">Auto Loan</option>
-                <option id="homeImprovement" value="2">Home Renovations</option>
-                <option id="personalLoan" value="3">High Value Purchase</option>
+                <option>-Loan Purpose-</option>
+                <option id="debtConsolidation" value="debt_consolidation">Debt Consolidation</option>
+                <option id="autoLoan" value="auto">Auto Loan</option>
+                <option id="homeImprovement" value="home_improvement">Home Improvement</option>
+                <option id="personalLoan" value="large_purchases">Large Purchase</option>
+                <option id="boatLoan" value="boat">Boat</option>
+                <option id="businessLoan" value="business">Business</option>
+                <option id="greenLoan" value="green">Green Loan</option>
+                <option id="householdLoan" value="household_expenses">Household Expenses</option>
+                <option id="medicalLoan" value="medical_dental">Medical/Dental</option>
+                <option id="relocationLoan" value="moving_relocation">Relocation</option>
+                <option id="studentLoan" value="student_loan">Student Loan</option>
+                <option id="taxLoan" value="taxes">Taxes</option>
+                <option id="vacationLoan" value="vacation">Vacation</option>
+                <option id="other" value="other">Other</option>
               </select>
             </div>
             <div id="userInfo">
@@ -37,16 +48,41 @@
               <input id="address2" name="address2" placeholder="Address Line 2" type="text"><br>
               <input id="ssn" name="ssn" placeholder="Social Security" type="text">
               <select id="creditScore" name="creditScore">
-                  <option>Credit Score</option>
-                  <option id="badCredit" value="0">Poor (580-)</option>
-                  <option id="fairCredit" value="1">Fair (581-669)</option>
-                  <option id="goodCredit" value="2">Good (670-739)</option>
-                  <option id="greatCredit" value="3">Very Good (740-799)</option>
-                  <option id="excellentCredit" value="4">Excellent (800-850)</option>
-                </select>
+                <option>-Credit Score-</option>
+                <option id="badCredit" value="0">Poor (600-)</option>
+                <option id="fairCredit" value="1">Fair (600-659)</option>
+                <option id="goodCredit" value="2">Good (660-719)</option>
+                <option id="excellentCredit" value="4">Excellent (720+)</option>
+              </select>
+              <select id="education" name="education">
+                <option>-Education-</option>
+                <option id="high_school" value="high_school">High School</option>
+                <option id="associate" value="associate">Associate's Degree</option>
+                <option id="bachelors" value="bachelors">Bachelor's Degree</option>
+                <option id="masters" value="masters">Master's Degree</option>
+                <option id="other_grad_degree" value="other_grad_degree">Other Graduate Degree</option>
+                <option id="other" value="other">Other</option>
+              </select>
             </div>
             <div id="employmentInfo">
-              
+              <h2>Employment Information</h2>
+              <select id="employment">
+                <option>-Employment-</option>
+                <option id="employed">Employed</option>
+                <option id="military">Military</option>
+                <option id="not_employed">Not Employed</option>
+                <option id="other">Other</option>
+                <option id="retired">Retired</option>
+                <option id="self_employed">Self Employed</option>
+              </select>
+              <input id="annualSalary" name="annualSalary" placeholder="Annual Salary">
+              <select id="paymentFrequency">
+                <option>-Payment Frequency-</option>
+                <option id="weekly" value="weekly">Weekly</option>
+                <option id="biweekly" value="biweekly">Bi-Weekly</option>
+                <option id="twice_monthly" value="twice_monthly">Twice Monthly</option>
+                <option id="monthly" value="monthly">Monthly</option>
+              </select>
             </div>
             <button type="submit">Get Loan Offers!</button>
           </form>
