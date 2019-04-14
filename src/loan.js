@@ -3,11 +3,6 @@
 
 export class Loan
 {
-  // "maxAmount": 35000,
-  // "minAmount": 5000,
-  // "maxApr": 25,
-  // "minApr": 8,
-  // "meanApr": 16.5,
   // "feeRate": null,
   // "maxFeeRate": null,
   // "minFeeRate": null,
@@ -37,6 +32,12 @@ export class Loan
     this.preApproved = preApproved;
     this.termLength = termLength;
     this.termUnit = termUnit;
+    this.maxAmount = 0;
+    this.minAmount = 0;
+    this.maxApr = 0;
+    this.minApr = 0;
+    this.meanApr = 0;
+    this.url = "";
   }
 }
 
