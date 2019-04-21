@@ -32,6 +32,8 @@ This project was created with Webpack and Node Package Manager.
 * Create a file in the project's root directory named ".env"
 * Store the token in the .env file using this format: 
 * token = YOUR-TOKEN-GOES-HERE
+* _The access token to use for testing the Even API: 
+e7675dd3-ff3b-434b-95aa-70251cc3784b_88140dd4-f13e-4ce3-8322-6eaf2ee9a2d2_
 
 ## Contact Information
 
